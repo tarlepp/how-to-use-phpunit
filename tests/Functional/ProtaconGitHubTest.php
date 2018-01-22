@@ -15,6 +15,13 @@ namespace App\Tests\Functional;
  */
 class ProtaconGitHubTest extends \PHPUnit_Extensions_Selenium2TestCase
 {
+    /**
+     * Search term | Repository count
+     * ------------+-----------------
+     * docker      | 3
+     * hackday     | 18
+     * vf          | 2
+     */
     public function testThatFindRepositorySearchReturnsExpectedRepositoryList(): void
     {
         static::markTestIncomplete('Implement this test');
