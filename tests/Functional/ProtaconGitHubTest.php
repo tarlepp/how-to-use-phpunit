@@ -20,7 +20,7 @@ class ProtaconGitHubTest extends \PHPUnit_Extensions_Selenium2TestCase
      * ------------+-----------------
      * docker      | 3
      * hackday     | 18
-     * vf          | 2
+     * vf          | 1
      */
     public function testThatFindRepositorySearchReturnsExpectedRepositoryList(): void
     {
