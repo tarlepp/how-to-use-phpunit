@@ -32,8 +32,7 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/)
 Get a checkout from GitHub
 
 ```bash
-git clone _todo_
-
+git clone https://github.com/tarlepp/how-to-use-phpunit.git
 ```
 
 ### Install packages
