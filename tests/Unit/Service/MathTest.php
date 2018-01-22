@@ -1,6 +1,10 @@
 <?php
-declare(strict_types=1);
-
+declare(strict_types = 1);
+/**
+ * /tests/Unit/Service/MathTest.php
+ *
+ * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
+ */
 namespace App\Tests\Unit;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -9,21 +13,27 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
  * Class MathTest
  *
  * @package App\Tests\Unit
+ * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
  */
 class MathTest extends KernelTestCase
 {
-    public function testThatSumIntReturnsExpected(): void
+    /**
+     * Note that there is three (3) different 'add' methods just to demonstrate what declare(strict_types = 1);
+     * will do - after this you'll always use it.
+     */
+
+    public function testThatAddIntReturnsExpected(): void
     {
-        static::markTestIncomplete('not yet implemented');
+        static::markTestIncomplete('Implement necessary tests for AddInt method');
     }
 
-    public function testThatSumFloatReturnsExpected(): void
+    public function testThatAddFloatReturnsExpected(): void
     {
-        static::markTestIncomplete('not yet implemented');
+        static::markTestIncomplete('Implement necessary tests for AddFloat method');
     }
 
-    public function testThatSumLooseReturnsExpected(): void
+    public function testThatAddLooseReturnsExpected(): void
     {
-        static::markTestIncomplete('not yet implemented');
+        static::markTestIncomplete('Implement necessary tests for AddLoose method - Good luck to cover all the cases');
     }
 }

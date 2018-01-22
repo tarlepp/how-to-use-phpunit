@@ -1,12 +1,17 @@
 <?php
 declare(strict_types = 1);
-
-namespace App\Service;
+/**
+ * /src/Util/Math.php
+ *
+ * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
+ */
+namespace App\Util;
 
 /**
  * Class Math
  *
  * @package App\Service
+ * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
  */
 class Math
 {
