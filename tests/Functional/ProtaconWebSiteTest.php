@@ -23,7 +23,7 @@ class ProtaconWebSiteTest extends \PHPUnit_Extensions_Selenium2TestCase
 
     public function testThatHekku2EmployeePlayerCardIsExpected(): void
     {
-        static::markTestSkipped('You need to implement this test');
+        static::markTestIncomplete('You need to implement this test');
     }
 
     protected function setUp(): void
