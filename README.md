@@ -25,7 +25,8 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/)
   
 ## Installation
 
-**Note: in Windows environment use `%cd%` (in PowerShell use `${PWD}`) instead of `$(pwd)`**
+**Note: in Windows environment use `%cd%` (in PowerShell use `${PWD}`) instead 
+of `$(pwd)`**
 
 ### Clone repository
 
@@ -35,11 +36,17 @@ Get a checkout from GitHub
 git clone https://github.com/tarlepp/how-to-use-phpunit.git
 ```
 
+Or alternatively just download those codes as a zip archive and extract those 
+into your computer.
+
 ### Install packages
 
 ```bash
 docker run -v $(pwd):/app composer install
 ```
+
+Note that this command must be run on the same directory where you cloned or 
+unzipped project source files.
 
 ## Running
 
