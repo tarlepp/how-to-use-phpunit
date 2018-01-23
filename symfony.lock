@@ -11,6 +11,9 @@
     "myclabs/deep-copy": {
         "version": "1.7.0"
     },
+    "paragonie/random_compat": {
+        "version": "v2.0.11"
+    },
     "phar-io/manifest": {
         "version": "1.0.1"
     },
@@ -70,6 +73,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.0"
+    },
+    "ramsey/uuid": {
+        "version": "3.7.3"
     },
     "roave/security-advisories": {
         "version": "dev-master"
