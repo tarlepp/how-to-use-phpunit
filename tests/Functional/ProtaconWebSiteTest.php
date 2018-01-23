@@ -18,7 +18,8 @@ class ProtaconWebSiteTest extends \PHPUnit_Extensions_Selenium2TestCase
     public function testThatProtaconSiteHasExpectedTitle(): void
     {
         $this->url('');
-        $this->assertSame('', $this->title());
+
+        static::assertSame('', $this->title(), 'Site title is not expected');
     }
 
     public function testThatHekku2EmployeePlayerCardIsExpected(): void
