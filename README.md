@@ -17,7 +17,7 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/) and [Selenium](
      * [Next steps](#next-steps)
   * [Development](#development)
      * [Basics](#basics)
-     * [Demo 'application'](#demo-'application')
+     * [Demo 'application'](#demo-application)
      * [Tests](#tests)
      * [Reports](#reports)
   * [Useful commands](#useful-commands)
