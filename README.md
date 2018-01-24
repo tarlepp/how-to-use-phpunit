@@ -15,6 +15,11 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/) and [Selenium](
      * [Start the containers](#start-the-containers)
      * [Performing tests](#performing-tests)
      * [Next steps](#next-steps)
+  * [Development](#development)
+     * [Basics](#basics)
+     * [Demo 'application'](#demo-'application')
+     * [Tests](#tests)
+     * [Reports](#reports)
   * [Useful commands](#useful-commands)
   * [Authors](#authors)
   * [License](#license)
@@ -30,16 +35,17 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/) and [Selenium](
 
 ### Clone repository
 
-Get a checkout from GitHub
+Get a clone from GitHub or alternatively just download codes as a zip archive
+and extract those to your computer.
 
 ```bash
 git clone https://github.com/tarlepp/how-to-use-phpunit.git
 ```
 
-Or alternatively just download codes as a zip archive and extract that to your 
-computer.
-
 ### Install packages
+
+After you've got the codes you need to install required dependencies via
+docker with following command:
 
 ```bash
 docker run -v $(pwd):/app composer install
@@ -47,6 +53,9 @@ docker run -v $(pwd):/app composer install
 
 Note that this command must be run on the same directory where you cloned or 
 unzipped project source files.
+
+Also note that installation is made via [composer](https://hub.docker.com/_/composer/)
+container - so no need for extra installations to get that working.
 
 ### Notes for Windows environment
 
@@ -87,6 +96,38 @@ You can run this command at any time you want to run tests again
 ### Next steps
 
 Fix and implement all tests.
+
+## Development
+
+### Basics
+
+When your containers are running all code changes are synced automatically to
+containers - so you don't need to worried about that at all.
+
+### Demo 'application'
+
+Application source code lives under `./src` directory. Note that application
+is not a real application - just simple classes that you need to test.
+
+Application itself is built with [Symfony](https://symfony.com/) framework. 
+
+### Tests
+
+You can find all the tests under `./tests` directory. Tests are divided to 
+three (3) categories:
+
+* Functional
+* Integration
+* Unit
+
+By default there is base structure for each test that you need to implement by
+yourself.
+
+### Reports
+
+After you have run the tests you can see actual code coverage report under
+`./build/report/` directory - just open that `index.html` file with your 
+favorite browser to see if you missed something in your tests.
 
 ## Useful commands
 
