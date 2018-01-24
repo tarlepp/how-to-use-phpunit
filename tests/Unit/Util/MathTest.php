@@ -1,11 +1,11 @@
 <?php
 declare(strict_types = 1);
 /**
- * /tests/Unit/Service/MathTest.php
+ * /tests/Unit/Util/MathTest.php
  *
  * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
  */
-namespace App\Tests\Unit;
+namespace App\Tests\Unit\Util;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
