@@ -10,8 +10,11 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/)
   * [Installation](#installation)
      * [Clone repository](#clone-repository)
      * [Install packages](#install-packages)
-  * [Running](#running)
-     * [Start the container](#start-the-container)
+     * [Notes for Windows environment](#notes-for-windows-environment)
+  * [Usage](#usage)
+     * [Start the containers](#start-the-containers)
+     * [Performing tests](#performing-tests)
+     * [Next steps](#next-steps)
   * [Useful commands](#useful-commands)
   * [Authors](#authors)
   * [License](#license)
@@ -25,9 +28,6 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/)
   
 ## Installation
 
-**Note: in Windows environment use `%cd%` (in PowerShell use `${PWD}`) instead 
-of `$(pwd)`**
-
 ### Clone repository
 
 Get a checkout from GitHub
@@ -36,8 +36,8 @@ Get a checkout from GitHub
 git clone https://github.com/tarlepp/how-to-use-phpunit.git
 ```
 
-Or alternatively just download those codes as a zip archive and extract those 
-into your computer.
+Or alternatively just download codes as a zip archive and extract that to your 
+computer.
 
 ### Install packages
 
@@ -48,26 +48,43 @@ docker run -v $(pwd):/app composer install
 Note that this command must be run on the same directory where you cloned or 
 unzipped project source files.
 
-## Running
+### Notes for Windows environment
 
-### Start the container
+* Within commands use `%cd%` (in PowerShell use `${PWD}`) instead of `$(pwd)`
+* Check that you've activated shared drives
+* If you're using eg. [VirtualBox](https://www.virtualbox.org/) or [VMware](https://www.vmware.com/solutions/virtualization.html) you need to disable `Hyper-V` [manually](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) if/when you want to use those again
+
+## Usage
+
+### Start the containers
+
+To start all necessary containers you need to run following command.
 
 ```bash
-# using the docker-compose (preferred way)
 docker-compose up -d
-
-# as a daemon
-docker run -v $(pwd):/how-to-use-phpunit -d how-to-use-phpunit
-
-# in interactive mode
-docker run -v $(pwd):/how-to-use-phpunit -it how-to-use-phpunit /bin/bash
 ```
 
-### Running tests
+This command will download and build all containers at first runtime - and it
+will take some time.
+
+### Performing tests
+
+After previous command is run without errors, you can run `phpunit` inside
+container with following command.
 
 ```bash
 docker-compose exec phpunit ./bin/phpunit
 ```
+
+You will get test output to your shell where you'll see all possible errors
+and other information about those tests.
+
+Note that at first time you run this command it will install necessary packages
+for PhpUnit.
+
+### Next steps
+
+Fix and implement all tests.
 
 ## Useful commands
 
