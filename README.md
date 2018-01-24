@@ -1,6 +1,6 @@
 # What is this ?
 
-Project to demonstrate how to use [PHPUnit](https://phpunit.de/)
+Project to demonstrate how to use [PHPUnit](https://phpunit.de/) and [Selenium](http://www.seleniumhq.org/)
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ unzipped project source files.
 ### Notes for Windows environment
 
 * Within commands use `%cd%` (in PowerShell use `${PWD}`) instead of `$(pwd)`
-* Check that you've activated shared drives
+* Check that you've activated shared drives, open Docker settings from your tray and open `Shared Drives`
 * If you're using eg. [VirtualBox](https://www.virtualbox.org/) or [VMware](https://www.vmware.com/solutions/virtualization.html) you need to disable `Hyper-V` [manually](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) if/when you want to use those again
 
 ## Usage
@@ -81,6 +81,8 @@ and other information about those tests.
 
 Note that at first time you run this command it will install necessary packages
 for PhpUnit.
+
+You can run this command at any time you want to run tests again
 
 ### Next steps
 
