@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/how-to-use-phpunit
     links:
-      - "hub"
+      - 'hub'
 
   chrome:
     image: selenium/node-chrome:3.8.1-erbium
@@ -21,4 +21,4 @@ services:
   hub:
     image: selenium/hub:3.8.1-erbium
     ports:
-      - "4444:4444"
+      - '4444:4444'
