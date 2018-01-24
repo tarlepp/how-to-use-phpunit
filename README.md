@@ -30,6 +30,11 @@ Project to demonstrate how to use [PHPUnit](https://phpunit.de/) and [Selenium](
   * [Mac](https://docs.docker.com/docker-for-mac/install/)
   * [Windows](https://docs.docker.com/docker-for-windows/install/)
   * [Ubuntu](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
+* IDE / Text editor
+  * [PhpStorm](https://www.jetbrains.com/phpstorm/)
+  * [NetBeans](https://netbeans.org/)
+  * [Sublime Text](https://www.sublimetext.com/)
+  * [Visual Studio Code](https://code.visualstudio.com/)
   
 ## Installation
 
