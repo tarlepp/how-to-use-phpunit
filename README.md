@@ -100,7 +100,7 @@ You can run this command at any time you want to run tests again
 
 ### Next steps
 
-Fix and implement all tests.
+Implement all tests. See next chapter for instructions.
 
 ## Development
 
@@ -134,12 +134,29 @@ After you have run the tests you can see actual code coverage report under
 `./build/report/` directory - just open that `index.html` file with your 
 favorite browser to see if you missed something in your tests.
 
+### Seeing what browser is doing
+
+Within Selenium tests it's quite usefully to actually _see_ what browser is
+actually doing - no worries this is also covered.
+
+For this you need a [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+so download and install it first.
+
+Next step is to change default password for VNC connection with following 
+command:
+
+```bash
+docker-compose exec chrome x11vnc -storepasswd <your_password_here> /home/seluser/.vnc/passwd
+```
+
+After that open VNC Viewer and connect to `0.0.0.0:5900`
+
 ## Useful commands
 
 There's few useful commands you can use to manage with containers.
 
 ```bash
-# attach to running container (when started with docker-compose)
+# get shell access to running container
 docker-compose exec phpunit /bin/bash
 
 # stop containers

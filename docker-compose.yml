@@ -10,13 +10,18 @@ services:
       - 'hub'
 
   chrome:
-    image: selenium/node-chrome:3.8.1-erbium
+    image: selenium/node-chrome-debug:3.8.1-erbium
     volumes:
       - /dev/shm:/dev/shm
+    ports:
+      - '5900:5900'
     depends_on:
       - hub
     environment:
       HUB_HOST: hub
+      SCREEN_WIDTH: 1280
+      SCREEN_HEIGHT: 1024
+      SCREEN_DEPTH: 16bit
 
   hub:
     image: selenium/hub:3.8.1-erbium
