@@ -47,4 +47,24 @@ class Math
     {
         return $a + $b;
     }
+
+    /**
+     * Method to get Fibonacci number
+     *
+     * @return \Generator
+     */
+    public function getFibonacci(): \Generator
+    {
+        $i = 0;
+        $k = 1; // first fibonacci value
+
+        yield $k;
+
+        while (true) {
+            $k = $i + $k;
+            $i = $k - $i;
+
+            yield $k;
+        }
+    }
 }

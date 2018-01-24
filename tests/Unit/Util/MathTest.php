@@ -24,16 +24,21 @@ class MathTest extends KernelTestCase
 
     public function testThatAddIntReturnsExpected(): void
     {
-        static::markTestIncomplete('Implement necessary tests for AddInt method');
+        static::markTestIncomplete('Implement necessary tests for addInt method');
     }
 
     public function testThatAddFloatReturnsExpected(): void
     {
-        static::markTestIncomplete('Implement necessary tests for AddFloat method');
+        static::markTestIncomplete('Implement necessary tests for addFloat method');
     }
 
     public function testThatAddLooseReturnsExpected(): void
     {
-        static::markTestIncomplete('Implement necessary tests for AddLoose method - Good luck to cover all the cases');
+        static::markTestIncomplete('Implement necessary tests for addLoose method - Good luck to cover all the cases');
+    }
+
+    public function testThatGetFibonacciReturnsExpected(): void
+    {
+        static::markTestIncomplete('Implement necessary tests for getFibonacci method');
     }
 }
