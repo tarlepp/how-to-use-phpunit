@@ -22,17 +22,17 @@ class MathTest extends KernelTestCase
      * will do - after this you'll always use it.
      */
 
-    public function testThatAddIntReturnsExpected(): void
+    public function testThatSumIntReturnsExpected(): void
     {
         static::markTestIncomplete('Implement necessary tests for addInt method');
     }
 
-    public function testThatAddFloatReturnsExpected(): void
+    public function testThatSumFloatReturnsExpected(): void
     {
         static::markTestIncomplete('Implement necessary tests for addFloat method');
     }
 
-    public function testThatAddLooseReturnsExpected(): void
+    public function testThatSumLooseReturnsExpected(): void
     {
         static::markTestIncomplete('Implement necessary tests for addLoose method - Good luck to cover all the cases');
     }
