@@ -32,7 +32,7 @@ class Basket
     private $products = [];
 
     /**
-     * @var $math
+     * @var Math
      */
     private $math;
 
@@ -82,7 +82,7 @@ class Basket
     {
         $total = 0.0;
 
-        $iterator = function (Product $product) use (&$total) {
+        $iterator = function (Product $product) use (&$total): void {
             $total = $this->math->sumFloat($total, $product->getPrice());
         };
 
@@ -96,7 +96,7 @@ class Basket
      */
     public function getProductNames(): string
     {
-        $iterator = function (Product $product) {
+        $iterator = function (Product $product): string {
             return $product->getName();
         };
 
