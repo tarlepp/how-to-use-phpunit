@@ -32,7 +32,7 @@ class Basket
     private $products = [];
 
     /**
-     * @var $math
+     * @var Math
      */
     private $math;
 
