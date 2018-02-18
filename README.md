@@ -1,5 +1,7 @@
 # What is this ?
 
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 Example project to demonstrate how to use [PHPUnit](https://phpunit.de/) 
 and [Selenium](http://www.seleniumhq.org/) with certain test cases that you
 need to implement.
