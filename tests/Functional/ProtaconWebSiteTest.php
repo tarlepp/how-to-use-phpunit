@@ -20,17 +20,23 @@ class ProtaconWebSiteTest extends \PHPUnit_Extensions_Selenium2TestCase
         // Open specified page on browser
         $this->url('');
 
-        static::markTestIncomplete('You need to implement this test');
+        static::assertSame('Etusivu - Protacon', $this->title(), 'Site title is not expected');
     }
 
     public function testThatHekku2EmployeePlayerCardIsExpected(): void
     {
-        static::markTestIncomplete('You need to implement this test');
+        // Open specified page on browser
+        $this->url('uratarinat/heikki-jussi-niemi/');
+
+        // Nothing can go wrong with selector - right?
+        $content = $this->byCssSelector('#fws_5a8972e7055b6 > div.col.span_12.left > div.vc_col-sm-8.wpb_column.column_container.vc_column_container.col.no-extra-padding.instance-2 > div > div > div > div > p:nth-child(2)')->text();
+
+        static::assertContains('missä tein opiskelujen ohella myös töitä', $content, 'Hekku2 has not done any work...');
     }
 
     protected function setUp(): void
     {
         $this->setHost('hub');
-        $this->setBrowserUrl('http://www.protacon.com/');
+        $this->setBrowserUrl('https://www.protacon.com/');
     }
 }
