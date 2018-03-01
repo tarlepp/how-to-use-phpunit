@@ -72,7 +72,6 @@ class ProtaconGitHubTest extends \PHPUnit_Extensions_Selenium2TestCase
                     'iot-hackday-r2d2',
                     'hackday-2015',
                     'hackday-2016-haksu',
-                    'iot-hackday-2015',
                     'hackday-2017-pappi',
                     'hackday-2017-autonomous-car',
                     'iot-hackday-iotkukka',
@@ -113,7 +112,7 @@ class ProtaconGitHubTest extends \PHPUnit_Extensions_Selenium2TestCase
      */
     private function setSearchTerm(string $searchWord, ?int $timeout = null): ProtaconGitHubTest
     {
-        $timeout = $timeout ?? 5000;
+        $timeout = $timeout ?? 10000;
 
         $callback = function (ProtaconGitHubTest $testCase) use ($searchWord): ?ProtaconGitHubTest {
             try {
@@ -136,7 +135,7 @@ class ProtaconGitHubTest extends \PHPUnit_Extensions_Selenium2TestCase
      */
     private function waitUntilFormIsNotSendingData(?int $timeout = null): ProtaconGitHubTest
     {
-        $timeout = $timeout ?? 5000;
+        $timeout = $timeout ?? 10000;
 
         $callback = function (ProtaconGitHubTest $testCase): ?ProtaconGitHubTest {
             try {
