@@ -22,33 +22,11 @@ class BasketTest extends KernelTestCase
 {
     public function testThatCalculateTotalPriceReturnsExpected(): void
     {
-        $basket = new Basket(new Math());
-        $basket->addProduct(new Product('Product 1', 10.10));
-        $basket->addProduct(new Product('Product 2', 20.35));
-
-        static::assertSame(30.45, $basket->calculateTotalPrice());
+        static::markTestIncomplete('Write a test for \'calculateTotalPrice\' method in \App\Shop\Basket class - Use multiple products');
     }
 
     public function testThatGetProductNamesReturnsExpected(): void
     {
-        $mathService = $this->createMock(Math::class);
-
-        $product1 = $this->createMock(Product::class);
-        $product1
-            ->expects(static::once())
-            ->method('getName')
-            ->willReturn('product 1');
-
-        $product2 = $this->createMock(Product::class);
-        $product2
-            ->expects(static::once())
-            ->method('getName')
-            ->willReturn('product 2');
-
-        $basket = (new Basket($mathService))
-            ->addProduct($product1)
-            ->addProduct($product2);
-
-        static::assertSame('product 1, product 2', $basket->getProductNames());
+        static::markTestIncomplete('Write a test for \'getProductNames\' method in \App\Shop\Basket class - Use mock for dependencies');
     }
 }

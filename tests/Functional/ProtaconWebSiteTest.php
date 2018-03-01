@@ -17,26 +17,18 @@ class ProtaconWebSiteTest extends \PHPUnit_Extensions_Selenium2TestCase
 {
     public function testThatProtaconSiteHasExpectedTitle(): void
     {
-        // Open specified page on browser
         $this->url('');
-
-        static::assertSame('Etusivu - Protacon', $this->title(), 'Site title is not expected');
+        $this->assertSame('', $this->title());
     }
 
     public function testThatHekku2EmployeePlayerCardIsExpected(): void
     {
-        // Open specified page on browser
-        $this->url('uratarinat/heikki-jussi-niemi/');
-
-        // Nothing can go wrong with selector - right?
-        $content = $this->byCssSelector('#fws_5a98022ba9ccc > div.col.span_12.left > div.vc_col-sm-8.wpb_column.column_container.vc_column_container.col.no-extra-padding.instance-2 > div > div > div > div > p:nth-child(2)')->text();
-
-        static::assertContains('missä tein opiskelujen ohella myös töitä', $content, 'Hekku2 has not done any work...');
+        static::markTestSkipped('You need to implement this test');
     }
 
     protected function setUp(): void
     {
         $this->setHost('hub');
-        $this->setBrowserUrl('https://www.protacon.com/');
+        $this->setBrowserUrl('http://www.protacon.com/');
     }
 }
